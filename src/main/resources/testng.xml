@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "C:\ChromeDriver\testng-1.0.dtd" >
+<suite name="LoginSuite">
+    <test name="LoginTests">
+        <classes>
+            <class name="LoginTest" />
+        </classes>
+    </test>
+</suite>
