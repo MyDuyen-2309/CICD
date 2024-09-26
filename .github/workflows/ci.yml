@@ -1,31 +1,31 @@
-name: Java CI with Maven
+name: CI
 
 on:
   push:
     branches:
-      - master
-  pull_request:
-    branches:
-      - master
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
+    - name: Checkout code
       uses: actions/checkout@v2
 
     - name: Set up JDK 17
-      uses: actions/setup-java@v1
+      uses: actions/setup-java@v2
       with:
         java-version: '17'
 
-    - name: Install dependencies and run tests
-      run: mvn clean test -X  # Thêm -X để có thông tin chi tiết hơn về lỗi
+    - name: Build with Maven
+      run: mvn clean test
 
     - name: Generate Allure Report
       run: mvn allure:report
 
-    - name: Serve Allure Report
-      run: mvn allure:serve
+    - name: Publish Allure Report
+      uses: actions/upload-artifact@v2
+      with:
+        name: allure-report
+        path: target/site/allure-maven
