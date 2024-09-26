@@ -1,57 +1,74 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>example.com</groupId>
-  <artifactId>testCICD</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  
-  <dependencies>
-    <!-- Selenium -->
-    <dependency>
-        <groupId>org.seleniumhq.selenium</groupId>
-        <artifactId>selenium-java</artifactId>
-        <version>4.11.0</version>
-    </dependency>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>example.com</groupId>
+    <artifactId>testCICD</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
 
-    <!-- TestNG -->
-    <dependency>
-        <groupId>org.testng</groupId>
-        <artifactId>testng</artifactId>
-        <version>7.7.1</version>
-        <scope>test</scope>
-    </dependency>
-
-    <!-- Allure TestNG -->
-    <dependency>
-        <groupId>io.qameta.allure</groupId>
-        <artifactId>allure-testng</artifactId>
-        <version>2.20.1</version>
-    </dependency>
- </dependencies>
+    <properties>
+	    <maven.compiler.source>17</maven.compiler.source>
+	    <maven.compiler.target>17</maven.compiler.target>
+	</properties>
 
 
-	<build>
-	    <plugins>
-	        <plugin>
-	            <groupId>io.qameta.allure</groupId>
-	            <artifactId>allure-maven</artifactId>
-	            <version>2.10.0</version>
-	        </plugin>
-	        
-	        <plugin>
-	            <groupId>org.apache.maven.plugins</groupId>
-	            <artifactId>maven-surefire-plugin</artifactId>
-	            <version>3.0.0-M8</version>
-	            <configuration>
-	                <suiteXmlFiles>
-	                    <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
-	                </suiteXmlFiles>
-	            </configuration>
-	        </plugin>
-        
-	    </plugins>
-	    
-	    
-	</build>
+    <dependencies>
+        <!-- Selenium -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.11.0</version>
+        </dependency>
 
-  
+        <!-- TestNG -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.7.1</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Allure TestNG -->
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>2.20.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>2.10.0</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M8</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+
+			<plugin>
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-compiler-plugin</artifactId>
+			    <version>3.8.1</version> <!-- hoặc sử dụng phiên bản mới hơn -->
+			    <configuration>
+			        <source>17</source> <!-- Cập nhật source version -->
+			        <target>17</target> <!-- Cập nhật target version -->
+			        <encoding>UTF-8</encoding>
+			    </configuration>
+			</plugin>
+        </plugins>
+    </build>
 </project>

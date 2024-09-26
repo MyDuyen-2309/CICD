@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-09-26T10:09:27 ICT" name="LoginSuite" finished-at="2024-09-26T10:09:30 ICT" duration-ms="3473">
+    <groups>
+    </groups>
+    <test started-at="2024-09-26T10:09:27 ICT" name="LoginTests" finished-at="2024-09-26T10:09:30 ICT" duration-ms="3473">
+      <class name="testCICD.loginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCICD.loginTest@4d14b6c2]" started-at="2024-09-26T10:09:27 ICT" name="setUp" finished-at="2024-09-26T10:09:29 ICT" duration-ms="1612" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testInvalidLogin()[pri:0, instance:testCICD.loginTest@4d14b6c2]" started-at="2024-09-26T10:09:29 ICT" name="testInvalidLogin" description="Test login form with invalid credentials" finished-at="2024-09-26T10:09:29 ICT" duration-ms="328" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCICD.loginTest@4d14b6c2]" started-at="2024-09-26T10:09:29 ICT" name="tearDown" finished-at="2024-09-26T10:09:29 ICT" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCICD.loginTest@4d14b6c2]" started-at="2024-09-26T10:09:29 ICT" name="setUp" finished-at="2024-09-26T10:09:30 ICT" duration-ms="995" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testLogin()[pri:0, instance:testCICD.loginTest@4d14b6c2]" started-at="2024-09-26T10:09:30 ICT" name="testLogin" description="Test login form with valid credentials" finished-at="2024-09-26T10:09:30 ICT" duration-ms="430" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCICD.loginTest@4d14b6c2]" started-at="2024-09-26T10:09:30 ICT" name="tearDown" finished-at="2024-09-26T10:09:30 ICT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCICD.loginTest -->
+    </test> <!-- LoginTests -->
+  </suite> <!-- LoginSuite -->
+</testng-results>

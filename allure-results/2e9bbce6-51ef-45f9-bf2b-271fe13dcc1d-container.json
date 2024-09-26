@@ -1,0 +1,1 @@
+{"uuid":"2e9bbce6-51ef-45f9-bf2b-271fe13dcc1d","name":"testCICD.loginTest.setUp","children":["5ddcdf18-1c28-41b9-b5cd-50b93b809026"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1727319891532,"stop":1727319892502}],"afters":[],"start":1727319891531,"stop":1727319892502}
