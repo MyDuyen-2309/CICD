@@ -24,13 +24,13 @@ jobs:
         java-version: '17'
 
     - name: Install dependencies and run tests
-      run: mvn clean test -X  # Thêm -X để có thông tin chi tiết về lỗi nếu cần
+      run: mvn clean test -X
 
     - name: Generate Allure Report
       run: mvn allure:report
 
     - name: Publish Allure Report
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3  # Sử dụng v3 thay vì v2
       with:
         name: allure-report
         path: target/site/allure-maven
