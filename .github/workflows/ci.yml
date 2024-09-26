@@ -1,8 +1,13 @@
-name: CI
+name: Java CI with Maven
 
 on:
   push:
     branches:
+      - master
+      - main
+  pull_request:
+    branches:
+      - master
       - main
 
 jobs:
@@ -18,8 +23,8 @@ jobs:
       with:
         java-version: '17'
 
-    - name: Build with Maven
-      run: mvn clean test
+    - name: Install dependencies and run tests
+      run: mvn clean test -X  # Thêm -X để có thông tin chi tiết về lỗi nếu cần
 
     - name: Generate Allure Report
       run: mvn allure:report
